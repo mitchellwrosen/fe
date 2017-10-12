@@ -1,0 +1,10 @@
+name: fe
+version: 0.1.0
+
+ghc-options: -freverse-errors -Wall
+
+executables:
+  fe:
+    main: Main.hs
+    dependencies:
+      - base

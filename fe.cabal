@@ -9,7 +9,10 @@ cabal-version:  >= 1.10
 
 executable fe
   main-is: Main.hs
-  ghc-options: -freverse-errors -Wall
+  default-extensions: LambdaCase RecursiveDo ScopedTypeVariables
+  ghc-options: -freverse-errors -Wall -threaded
   build-depends:
       base
+    , reactive-banana
+    , vty
   default-language: Haskell2010

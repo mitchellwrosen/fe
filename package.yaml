@@ -3,8 +3,16 @@ version: 0.1.0
 
 ghc-options: -freverse-errors -Wall
 
+default-extensions:
+  - LambdaCase
+  - RecursiveDo
+  - ScopedTypeVariables
+
 executables:
   fe:
     main: Main.hs
+    ghc-options: -threaded
     dependencies:
       - base
+      - reactive-banana
+      - vty

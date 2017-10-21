@@ -4,15 +4,31 @@ version: 0.1.0
 ghc-options: -freverse-errors -Wall
 
 default-extensions:
+  - BangPatterns
   - LambdaCase
+  - MultiWayIf
+  - OverloadedStrings
   - RecursiveDo
   - ScopedTypeVariables
 
+library:
+  source-dirs: src
+  dependencies:
+    - base
+    - lens
+    - reactive-banana
+    - vty
+    - yi-rope
+
 executables:
   fe:
+    source-dirs: app
     main: Main.hs
     ghc-options: -threaded
     dependencies:
       - base
+      - fe
+      - lens
       - reactive-banana
       - vty
+      - yi-rope
